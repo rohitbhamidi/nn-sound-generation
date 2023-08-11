@@ -1,4 +1,4 @@
-from autoencoder import Autoencoder
+from autoencoder import VAE
 from keras.datasets import mnist
 
 LEARNING_RATE = .0001
@@ -16,7 +16,7 @@ def load_mnist():
     return x_train, y_train, x_test, y_test
 
 def train(x_train, learning_rate, batch_size, num_epochs):
-    autoencoder = Autoencoder(
+    autoencoder = VAE(
         input_shape=(28,28,1),                      # same shape as the MNIST data
         conv_filters=(32,64,64,64),
         conv_kernels=(3,3,3,3),
