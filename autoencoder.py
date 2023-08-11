@@ -219,7 +219,7 @@ class VAE:
         self.conv_kernels = conv_kernels
         self.conv_strides = conv_strides
         self.latent_space_dim = latent_space_dim
-        self.reconstruction_loss_weight = 1000
+        self.reconstruction_loss_weight = 1000000
 
         self.encoder = None
         self.decoder = None
